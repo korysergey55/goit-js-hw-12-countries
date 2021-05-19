@@ -1,10 +1,10 @@
 // import './sass/main.scss';
 import debounce from 'lodash.debounce';
-import { alert, error, defaults } from '@pnotify/core';
+import {alert, error} from '@pnotify/core';
 import '@pnotify/core/dist/PNotify.css';
 import '@pnotify/core/dist/BrightTheme.css';
 
-import {fetchData, endPromise} from './js/api';
+import {endPromise} from './js/api';
 import list from './tpl/list.hbs';
 import main from './tpl/main.hbs';
 
@@ -20,11 +20,11 @@ function inputChange(event) {
   if (!inputValue) return;
   endPromise(inputRef)
     .then(user => userCountries(user))
-    .catch(user => userCountriesError(error));
+    .catch(error => userCountriesError(error));
 }
 
-const userCountriesError = error => {
-  alert({ text: error });
+const userCountriesError = err => {
+  error({ text: err });
 };
 
 const userCountries = country => {

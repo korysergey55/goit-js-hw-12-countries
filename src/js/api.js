@@ -9,7 +9,7 @@ const endPromise = name =>
     if (response.ok) {
       return response.json();
     }
-    return Promise(`error ${name}`);
+    return Promise.reject(`error ${name}`);
   });
   
- export {fetchData, endPromise};
+ export {endPromise};

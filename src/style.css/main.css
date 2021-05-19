@@ -1,0 +1,16 @@
+ul,
+li {
+    list-style: none;
+}
+.input{
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 300px;
+    height: 30px;
+}
+.country-list{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
