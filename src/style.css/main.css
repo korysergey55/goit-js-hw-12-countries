@@ -46,4 +46,8 @@ body{
 }
 .card-img{
     margin-bottom: 30px;
+    scale: 1;
+}
+.card-img:hover{
+    scale: 1.5;
 }
